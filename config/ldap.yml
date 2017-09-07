@@ -4,7 +4,7 @@
 # environment if you need something different per environment.
 authorizations: &AUTHORIZATIONS
   allow_unauthenticated_bind: false
-  group_base: ou=groups,dc=test,dc=com
+  group_base: ou=users,dc=jnc, dc=geoland, dc=local
   ## Requires config.ldap_check_group_membership in devise.rb be true
   # Can have multiple values, must match all to be authorized
   required_groups:
@@ -28,12 +28,12 @@ authorizations: &AUTHORIZATIONS
 ## Environment
 
 development:
-  host: localhost
+  host: 72.27.221.26
   port: 389
   attribute: cn
-  base: ou=people,dc=test,dc=com
-  admin_user: cn=admin,dc=test,dc=com
-  admin_password: admin_password
+  base: ou=users,dc=jnc, dc=geoland, dc=local
+  admin_user: cn=dkblake,dc=knc,dc=geoland, dc=local
+  admin_password: iR@d!um3389
   ssl: false
   # <<: *AUTHORIZATIONS
 
