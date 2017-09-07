@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  mount Spina::Engine => '/'
+  mount Spina::Engine => '/pages'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'app#index'
 end
