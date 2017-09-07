@@ -21,27 +21,72 @@ const Main =(props, {theme}) => {
             alignItems: 'center'
         }}>
             <Router>
-                <div>
+                <div style={{
+                    display:'flex',
+                    flexDirection: 'row'
+                }}>
                     <Tabs
                       //tabStyle={tabStyle}
                       //style={baseStyle}
-                      tabTitleStyle={{ marginRight: 40 }}
+                      tabTitleStyle={{display: 'flex'}}
                       useAnimate={true}
                     >
                       <Tab title="Home">
-                        <Route exact match='/' component={Home} />    
+                        <div style={{
+                           display:'flex',
+                           flexDirection:'column'
+                        }}>
+                            <div style={{
+                               display: 'flex',
+                               flexDirection: 'row'
+                            }}>
+                                <Route exact match='/' component={Home} />
+                            </div>
+                        </div>
                       </Tab>
             
                       <Tab title="Our Services">
-                        <Route match='/services' component={OurServices} />
+                        <div style={{
+                           display:'flex',
+                           flexDirection:'column'
+                        }}>
+                            <div style={{
+                               display: 'flex',
+                               flexDirection: 'row'
+                            }}>
+                                <Route match='/services' component={OurServices} />
+                            </div>
+                        </div>
                       </Tab>
             
                       <Tab title="Our Business">
-                        <Route match='/business' component={OurBusiness} />
+                        <div style={{
+                           display:'flex',
+                           flexDirection:'column'
+                        }}>
+                            <div style={{
+                               display: 'flex',
+                               flexDirection: 'row'
+                            }}>
+                                <Route match='/business' component={OurBusiness} />
+                            </div>
+                        </div>
+                        
                       </Tab>
             
                       <Tab title="Contact Us">
-                        <Route match='/contact' component={ContactUs} />
+                        <div style={{
+                           display:'flex',
+                           flexDirection:'column'
+                        }}>
+                            <div style={{
+                               display: 'flex',
+                               flexDirection: 'row'
+                            }}>
+                                <Route match='/contact' component={ContactUs} />
+                            </div>
+                        </div>
+                        
                       </Tab>
                     </Tabs>
                 </div>

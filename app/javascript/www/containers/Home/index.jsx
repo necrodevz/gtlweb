@@ -2,7 +2,7 @@
 import React from 'react'
 
 /*Component Imports*/
-
+import VideoPlayer from '../../components/VideoPlayer'
 
 
 /*UI Imports*/
@@ -16,7 +16,7 @@ const Home =(props, {theme}) => {
             flexDirection: 'row',
             alignItems: 'center'
         }}>
-            
+            <VideoPlayer url={'https://youtu.be/d-kgTJubTbg'} />
         </div>
             
     )
