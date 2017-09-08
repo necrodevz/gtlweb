@@ -10,7 +10,7 @@ import MediaPlayer from 'react-uwp/MediaPlayer'
 import Dialog from 'react-uwp/Dialog'
 
 /*Code*/
-const VideoPlayer =({url} => {
+const VideoPlayer =({url}) => {
     return(
         <Dialog>
             <MediaPlayer
