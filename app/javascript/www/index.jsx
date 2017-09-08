@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Theme as UWPThemeProvider, getTheme } from "react-uwp/Theme";
 import {Main} from './layouts'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router} from 'react-router-dom'
 import bg from './img/land1.jpg'
 
 export class WWW extends Component {
@@ -15,7 +15,9 @@ export class WWW extends Component {
           desktopBackgroundImage: bg // set global desktop background image
         })}
       >
-        <Main />
+        <Router>
+          <Main />
+        </Router>
       </UWPThemeProvider>
     )
   }

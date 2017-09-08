@@ -1,6 +1,6 @@
 /* System imports*/
 import React from 'react'
-import {BrowserRouter as Router, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 /*Container Imports*/
 import Home from '../containers/Home'
@@ -13,6 +13,7 @@ import ContactUs from '../containers/ContactUs'
 import Tabs, {Tab} from 'react-uwp/Tabs'
 
 /*Code*/
+const urls = ['/', '/services', '/business', '/contact']
 const Main =(props, {theme}) => {
     return(
         <div style={{
@@ -20,7 +21,6 @@ const Main =(props, {theme}) => {
             flexDirection: 'column',
             alignItems: 'center'
         }}>
-            <Router>
                 <div style={{
                     display:'flex',
                     flexDirection: 'row'
@@ -36,12 +36,8 @@ const Main =(props, {theme}) => {
                            display:'flex',
                            flexDirection:'column'
                         }}>
-                            <div style={{
-                               display: 'flex',
-                               flexDirection: 'row'
-                            }}>
-                                <Route exact match='/' component={Home} />
-                            </div>
+                            
+                                <Route exact path='/' component={Home} />
                         </div>
                       </Tab>
             
@@ -54,7 +50,7 @@ const Main =(props, {theme}) => {
                                display: 'flex',
                                flexDirection: 'row'
                             }}>
-                                <Route match='/services' component={OurServices} />
+                                <Route path='/services' component={OurServices} />
                             </div>
                         </div>
                       </Tab>
@@ -68,7 +64,7 @@ const Main =(props, {theme}) => {
                                display: 'flex',
                                flexDirection: 'row'
                             }}>
-                                <Route match='/business' component={OurBusiness} />
+                                <Route path='/business' component={OurBusiness} />
                             </div>
                         </div>
                         
@@ -83,14 +79,14 @@ const Main =(props, {theme}) => {
                                display: 'flex',
                                flexDirection: 'row'
                             }}>
-                                <Route match='/contact' component={ContactUs} />
+                                <Route path='/contact' component={ContactUs} />
                             </div>
                         </div>
                         
                       </Tab>
                     </Tabs>
                 </div>
-            </Router>
+           
         </div>
             
     )

@@ -3,7 +3,7 @@ import React from 'react'
 
 /*Component Imports*/
 import VideoPlayer from '../../components/VideoPlayer'
-
+import Separator from 'react-uwp/Separator'
 
 /*UI Imports*/
 
@@ -16,7 +16,9 @@ const Home =(props, {theme}) => {
             flexDirection: 'row',
             alignItems: 'center'
         }}>
-            <VideoPlayer url={'https://youtu.be/d-kgTJubTbg'} />
+            <VideoPlayer url={'https://youtu.be/d-kgTJubTbg'} youtubeConfig={{controls: 0}}/>
+            <Separator />
+            
         </div>
             
     )
