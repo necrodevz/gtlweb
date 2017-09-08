@@ -6,25 +6,20 @@ import React from 'react'
 
 
 /*UI Imports*/
-import MediaPlayer from 'react-uwp/MediaPlayer' 
+import MediaPlayer from 'react-uwp/MediaPlayer'
+import Dialog from 'react-uwp/Dialog'
 
 /*Code*/
-const VideoPlayer =({url, ...options}, {theme}) => {
+const VideoPlayer =({url} => {
     return(
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center'
-        }}>
+        <Dialog>
             <MediaPlayer
               url={url}
-              style={{ margin: 20 }}
               width={960}
               height={540}
               displayMode="minimum"
-              {...options}
             />
-        </div>
+        </Dialog>
             
     )
 }
